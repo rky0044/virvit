@@ -166,3 +166,7 @@ i:hover {
   color: #00fcb6;
   cursor: pointer;
 }
+
+.requiredText{
+  color: red;
+}
