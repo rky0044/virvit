@@ -9,25 +9,41 @@ const CandidateLogin = () => {
 
     const[username,setUserName]=useState("");
     const [password,setPassword]= useState("");
+    const [errorUser,setErrorUser] = useState("");
+    const [errorPassword,setErrorPassword] = useState("");
     const navaigate = useNavigate;
 
     const collectData = async()=>{
         console.log(username,password);
-        let result =await fetch("https://virvit.mydevpartner.website/vvapi/v1/login/",{
-            method:"post",
-           
-            body:JSON.stringify({username,password, device_id:'1'}),
-            headers:{
-                'Content-Type':'Application/json'
-            },
-           
-        })
-        result=  await result.json();
-        console.log(result,"results");
-        if(result)
-        {
-            navaigate('/')
-        }
+
+       if(username == ''){
+        setErrorUser("user name is required");
+       }
+       if(password == ''){
+        setErrorPassword(' Password is required')
+       }
+
+
+       if(username != '' && password != '')
+       {
+
+           let result =await fetch("https://virvit.mydevpartner.website/vvapi/v1/login/",{
+               method:"post",
+              
+               body:JSON.stringify({username,password, device_id:'1'}),
+               headers:{
+                   'Content-Type':'Application/json'
+               },
+              
+           })
+           result=  await result.json();
+           console.log(result,"results");
+           if(result)
+           {
+               navaigate('/')
+           }
+       }
+
     }
 
     return (
@@ -46,7 +62,10 @@ const CandidateLogin = () => {
                                         <div>
 
                                             <input className="inputText w-75 mt-2" value={username || ''} onChange={(event)=>setUserName(event.target.value)} type="text" id="fname" placeholder="Email Login Email ID" name="username" />
-                                            <input type="text" className="inputText w-75 " value={password || ''} onChange={(event)=>setPassword(event.target.value)} placeholder="Password" id="lname" name="password" />
+                                            <span><p className="requiredText">{errorUser}</p></span>
+                                            <input type="password" className="inputText w-75 " value={password || ''} onChange={(event)=>setPassword(event.target.value)} placeholder="Password" id="lname" name="password" />
+                                            <span><p className="requiredText">{errorPassword}</p></span>
+
                                         </div>
                                         <div className="forgetPass">
                                             <a href="#" >Forget Password ?</a>

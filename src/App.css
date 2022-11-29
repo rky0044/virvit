@@ -62,11 +62,12 @@ button.btn.btn-secondary.btn-md.btnSignup:hover{
 .loginHeader{
   margin-top: 30px !important;
   border-bottom: 1px solid #3a51d3;
+ 
 }
 .loginfooter{
   display: flex;
   margin-top: 30px !important;
- 
+  
 }
 .socialIconfooter{
   margin-top: 10px;
@@ -170,3 +171,125 @@ i:hover {
 .requiredText{
   color: red;
 }
+
+.search-div{
+  padding: 80px 20px;
+    background: #394bb4;
+    background: linear-gradient(90deg,#394bb4 12%,#6d79be 68%,#929bd2 86%);
+}
+
+.container-fluid{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button.btn.btn-primary.srcButton{
+  background-color: #3a51d3;
+  border: 1px solid #3a51d3;
+  color: #fff;
+  font-weight: 600;
+  height: 45px;
+  border-radius: 15px;
+  width: 100%;
+}
+
+input.form-control.mr-sm-2{
+  height: 45px;
+  border-radius: 0 12px 12px 0;
+}
+
+
+span.input-group-text.bg-white {
+  font-size: 20px;
+  color: #3a51d3;
+  border-radius: 12px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.seachIcon{
+  position: relative;
+  top: 0px;
+}
+.carouselDiv{
+  margin-top: 40px !important;
+  margin-bottom: 80px !important;
+}
+.latestJob{
+  font-size: 30px;
+  font-weight: 600;
+  color: #3a51d3;
+  font-family:  Nunito Sans,sans-serif;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.card{
+  border-radius: 30px !important;
+  border-color: #3a51d3 !important;
+ 
+  
+
+  
+}
+.card-title{
+  color: #3a51d3;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+
+
+.card:hover{
+  /* transform: scale(1.5); */
+  animation-delay: -2s;
+box-shadow: 20px 20px 20px rgba(101, 108, 218, 0.12), 10px 4px 8px rgba(96, 57, 204, 0.06);
+}
+
+.carousel-control-next-icon{
+  background-color: #3a51d3;
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3a51d3;
+}
+
+.carousel-control-prev-icon{
+  background-color: #3a51d3;
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #3a51d3;
+  
+}
+.row{
+  --bs-gutter-x:0rem !important;
+}
+
+
+.carousel-control-prev {
+  left: -113px !important;
+  width: 10% !important;
+  
+}
+
+.carousel-control-next {
+  right: -113px !important;
+  width: 10% !important;
+}
+
+/* .carousel-control-next, .carousel-control-prev{
+  
+} */

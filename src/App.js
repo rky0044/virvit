@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import Registration from './components/CandidateRegistartion'
 
+
 function App() {
   return (
     <div className="App">
