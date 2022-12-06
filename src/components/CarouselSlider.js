@@ -57,8 +57,7 @@ const CarouselSlider = () => {
                                     </Card>
                                 </div>
                                 
-                                ))
-                               }
+                                )) }
                                     
 
                               

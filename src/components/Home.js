@@ -16,6 +16,7 @@ const Home = () => {
 
     const [title, setTitle] = useState('');
     const [area, setArea] = useState('');
+    const [searchJob, setSearchJob] = useState([]);
 
 
     const onSearch = (e) => {
@@ -28,7 +29,10 @@ const Home = () => {
 
             axios.post('https://virvit.mydevpartner.website/vvapi/v1/job-filter/', formData)
                 .then((res) => {
-                    console.log(JSON.stringify(res.data), 'this is response data in ramesh');
+                    console.log(JSON.stringify(res.data),"..reeknkesnfkn") ;
+                    console.log(res.data,"..new.reeknkesnfkn") ;
+
+                   setSearchJob(res.data);
 
                 })
         }
@@ -75,7 +79,36 @@ const Home = () => {
             </div>
 
             <div className="row">
-                <div className="col-md-6">
+                {searchJob.map((item,key)=>(
+                    <div className="col-md-6">
+                    <div className="search-job-div md-4">
+                        <div className="row">
+                            <div className="col-md-5">
+                                <h4 className="job-title">{item.title}Infotech Pvt Ltd</h4>
+                                <h5 className="job-sub-title">Marketing New</h5>
+                                <p className="job-experience">SGD - 5000 - 10000</p>
+                                <p className="job-skill">
+                                    <span>Team Player, </span>
+                                </p>
+                            </div>
+                            <div className="col-md-1">
+
+                            </div>
+                            <div className="col-md-3">
+                                <button type="button" className="btn apply-btn">APPLY </button>
+                            </div>
+                            <div className="col-md-3">
+                                <button type="button" className="btn apply-btn">SAVE </button>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    </div>
+
+                ))}
+
+                {/* <div className="col-md-6">
                     <div className="search-job-div md-4">
                         <div className="row">
                             <div className="col-md-5">
@@ -93,13 +126,14 @@ const Home = () => {
                                 <button type="button" className="btn apply-btn">APPLY </button>
                             </div>
                             <div className="col-md-3">
-                            <button type="button" className="btn apply-btn">SAVE </button>
+                                <button type="button" className="btn apply-btn">SAVE </button>
                             </div>
 
 
                         </div>
                     </div>
-                </div>
+                </div> */}
+
             </div>
 
 
