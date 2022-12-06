@@ -13,6 +13,9 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 const eye = <FontAwesomeIcon icon={faEye} />;
 
 
@@ -236,6 +239,7 @@ const CandidateRegistration = () => {
 
     return (
         <>
+        <ToastContainer />
             <div className="Container-fluid">
 
                 <Header />
@@ -243,18 +247,18 @@ const CandidateRegistration = () => {
                     <Row>
                         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                             <Row>
-                                <Col sm={6}>
+                                <Col sm={6} className="text-center">
                                     <Nav variant="pills" className="flex-column ">
 
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="first">Candidate Signup</Nav.Link>
+                                        <Nav.Item className="csignup">
+                                            <Nav.Link eventKey="first" >Candidate Signup</Nav.Link>
                                         </Nav.Item>
 
                                     </Nav>
                                 </Col>
                                 <Col sm={6}>
                                     <Nav variant="pills" className="flex-column">
-                                        <Nav.Item>
+                                        <Nav.Item className="csignup">
                                             <Nav.Link eventKey="second">Employer Signup</Nav.Link>
                                         </Nav.Item>
                                     </Nav>

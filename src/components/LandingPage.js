@@ -8,6 +8,9 @@ const search = <FontAwesomeIcon icon={faSearch} />;
 const location= <FontAwesomeIcon icon={faLocationPin} />
 
 const LandingPage = () => {
+
+
+
     return (
 
         <div className='search-div'>
@@ -20,7 +23,7 @@ const LandingPage = () => {
                             <div className='input-group'>
 
                             <span className="input-group-text bg-white"><i className='seachIcon'>{search}</i></span>
-                            <input className="form-control mr-sm-2" type="search" placeholder="Job Title or Keywords" aria-label="Search" />
+                            <input className="form-control mr-sm-2" name='title' type="search" placeholder="Job Title or Keywords" aria-label="Search" />
                             </div>
 
                         </div>
@@ -28,7 +31,7 @@ const LandingPage = () => {
                         <div className='input-group'>
                         <span className="input-group-text bg-white"><i className='seachIcon' >{location}</i></span>
 
-                            <input className="form-control mr-sm-2" type="search" placeholder="Area, City or Town" aria-label="Search" />
+                            <input className="form-control mr-sm-2" name='area' type="search" placeholder="Area, City or Town" aria-label="Search" />
                             </div>
                         </div>
                         <div className='col-md-2'>

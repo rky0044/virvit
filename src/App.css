@@ -32,12 +32,13 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-button.btn.btn-secondary.btn-md.btnSignup{
+button.btn.btn-secondary.btn-md.btnSignup {
   background-color: #f8f9fa;
   width: 200px;
   color: black;
@@ -49,42 +50,48 @@ button.btn.btn-secondary.btn-md.btnSignup{
 }
 
 
-button.btn.btn-secondary.btn-md.btnSignup:hover{
-  background-color:#3a51d3;
+button.btn.btn-secondary.btn-md.btnSignup:hover {
+  background-color: #3a51d3;
   color: white;
 }
 
-.div-loginBtn{
+.div-loginBtn {
   display: flex;
   justify-content: right;
   text-align: right;
 }
-.loginHeader{
+
+.loginHeader {
   margin-top: 30px !important;
   border-bottom: 1px solid #3a51d3;
- 
-}
-.loginfooter{
-  display: flex;
-  margin-top: 30px !important;
-  
-}
-.socialIconfooter{
-  margin-top: 10px;
- 
+
 }
 
-a{
+.loginfooter {
+  display: flex;
+  margin-top: 30px !important;
+
+}
+
+.socialIconfooter {
+  margin-top: 10px;
+
+}
+
+a {
   text-decoration: none !important;
   color: #3a51d3 !important;
 }
+
 div#navbarNav {
   flex-direction: row-reverse;
 }
-.headerIMG{
+
+.headerIMG {
   width: -webkit-fill-available !important;
 }
-.loginForm{
+
+.loginForm {
   margin-left: 68px;
   margin-top: 20px;
   height: 400px;
@@ -92,33 +99,36 @@ div#navbarNav {
   border-radius: 43px 43px 0px 0px;
   box-shadow: 0px 0px 2px;
 }
-.loginHeading{
+
+.loginHeading {
   color: #596eda;
- padding-top: 15px;
- font-weight: bold;
+  padding-top: 15px;
+  font-weight: bold;
 
 }
 
-.inputText{
- 
- 
- margin-top: 30px;
- padding: 10px 0px;
+.inputText {
+
+
+  margin-top: 30px;
+  padding: 10px 0px;
   border: none !important;
   border-bottom: 1px solid rgb(143, 136, 136) !important;
   border-radius: none !important;
-  border-radius:0px !important;
+  border-radius: 0px !important;
 
 
 }
-.forgetPass{
+
+.forgetPass {
   text-align: right;
   padding-right: 55px;
   font-weight: bold;
   margin-top: 15px;
-  
+
 }
-.checkBox{
+
+.checkBox {
   margin: 40px 0px 0px 70px;
 }
 
@@ -126,29 +136,33 @@ label.form-check-label {
   display: table;
   color: #596eda;
 }
-#exampleCheck1{
-  border: 2px solid  #3a51d3;
+
+#exampleCheck1 {
+  border: 2px solid #3a51d3;
 }
-.lognBtn{
+
+.lognBtn {
   margin: 15px;
 
 }
-.imgHeader{
+
+.imgHeader {
   margin-top: 20px;
 }
 
-.gender{
+.gender {
   margin-left: 64px !important;
-  
+
 }
-.tabesContaints{
+
+.tabesContaints {
   margin-top: 30px;
   margin-left: 20px;
 }
 
 
-.searchWrapper{
-  border:0px !important;
+.searchWrapper {
+  border: 0px !important;
   appearance: none;
 }
 
@@ -163,22 +177,23 @@ i {
   top: 61%;
   right: 6%;
 }
+
 i:hover {
   color: #00fcb6;
   cursor: pointer;
 }
 
-.requiredText{
+.requiredText {
   color: red;
 }
 
-.search-div{
+.search-div {
   padding: 80px 20px;
-    background: #394bb4;
-    background: linear-gradient(90deg,#394bb4 12%,#6d79be 68%,#929bd2 86%);
+  background: #394bb4;
+  background: linear-gradient(90deg, #394bb4 12%, #6d79be 68%, #929bd2 86%);
 }
 
-.container-fluid{
+.container-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -186,7 +201,7 @@ i:hover {
   margin-left: auto;
 }
 
-button.btn.btn-primary.srcButton{
+button.btn.btn-primary.srcButton {
   background-color: #3a51d3;
   border: 1px solid #3a51d3;
   color: #fff;
@@ -196,7 +211,7 @@ button.btn.btn-primary.srcButton{
   width: 100%;
 }
 
-input.form-control.mr-sm-2{
+input.form-control.mr-sm-2 {
   height: 45px;
   border-radius: 0 12px 12px 0;
 }
@@ -213,48 +228,53 @@ span.input-group-text.bg-white {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  width: 100%;
+  width: 85% !important;
+  height: 40px;
 }
 
-.seachIcon{
+.seachIcon {
   position: relative;
   top: 0px;
 }
-.carouselDiv{
+
+.carouselDiv {
   margin-top: 40px !important;
   margin-bottom: 80px !important;
 }
-.latestJob{
+
+.latestJob {
   font-size: 30px;
   font-weight: 600;
   color: #3a51d3;
-  font-family:  Nunito Sans,sans-serif;
+  font-family: Nunito Sans, sans-serif;
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: left;
 }
-.card{
+
+.card {
   border-radius: 30px !important;
   border-color: #3a51d3 !important;
- 
-  
 
-  
+
+
+
 }
-.card-title{
+
+.card-title {
   color: #3a51d3;
   font-size: 20px !important;
   font-weight: 600 !important;
 }
 
 
-.card:hover{
+.card:hover {
   /* transform: scale(1.5); */
   animation-delay: -2s;
-box-shadow: 20px 20px 20px rgba(101, 108, 218, 0.12), 10px 4px 8px rgba(96, 57, 204, 0.06);
+  box-shadow: 20px 20px 20px rgba(101, 108, 218, 0.12), 10px 4px 8px rgba(96, 57, 204, 0.06);
 }
 
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   background-color: #3a51d3;
   width: 3rem !important;
   height: 3rem !important;
@@ -264,7 +284,7 @@ box-shadow: 20px 20px 20px rgba(101, 108, 218, 0.12), 10px 4px 8px rgba(96, 57, 
   color: #3a51d3;
 }
 
-.carousel-control-prev-icon{
+.carousel-control-prev-icon {
   background-color: #3a51d3;
   width: 3rem !important;
   height: 3rem !important;
@@ -272,17 +292,18 @@ box-shadow: 20px 20px 20px rgba(101, 108, 218, 0.12), 10px 4px 8px rgba(96, 57, 
   top: 50%;
   transform: translateY(-50%);
   color: #3a51d3;
-  
+
 }
-.row{
-  --bs-gutter-x:0rem !important;
+
+.row {
+  --bs-gutter-x: 0rem !important;
 }
 
 
 .carousel-control-prev {
   left: -113px !important;
   width: 10% !important;
-  
+
 }
 
 .carousel-control-next {
@@ -290,6 +311,121 @@ box-shadow: 20px 20px 20px rgba(101, 108, 218, 0.12), 10px 4px 8px rgba(96, 57, 
   width: 10% !important;
 }
 
-/* .carousel-control-next, .carousel-control-prev{
-  
-} */
+.candidate-home-div {
+  border: 1px solid #bab4b4;
+  border-radius: 15px;
+  padding: 20px 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.candidate-page {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.candidateH2 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  color: #aeadad;
+}
+
+.profileSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+span.important-link {
+  margin-bottom: 0;
+  color: #3a51d3;
+  font-size: 1vw;
+  font-weight: 600;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.dropdown {
+  text-align: right !important;
+  padding-right: 17px !important;
+}
+
+
+
+.job-status-section {
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+img.candidate-homepage {
+  width: 100% !important;
+  height: 80vh !important;
+}
+
+.csignup .nav-link.active {
+  color: #fff !important;
+  background-color: #3a51d3 !important;
+}
+
+.csignup .nav-link {
+  background-color: #fff !important;
+  color: #3a51d3 !important;
+  border: 1px solid #3a51d3 !important;
+  width: 20%;
+}
+
+.csignup {
+  text-align: center;
+}
+
+.search-job-div {
+  border: 1px solid #3a51d3;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.job-title {
+  font-size: 1.5vw;
+  font-weight: 600;
+  font-family: Nunito Sans, sans-serif;
+  color: #3a51d3;
+
+}
+
+.job-sub-title {
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: Nunito Sans, sans-serif;
+  color: #3a51d3;
+}
+
+.job-experience {
+  font-size: .8vw;
+  font-weight: 500;
+  color: gray;
+}
+
+.job-skill {
+  font-size: .8vw;
+  font-weight: 500;
+  color: gray;
+}
+
+button.btn.apply-btn {
+  background-color: #3a51d3;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 15px;
+  border: 1.5px solid #3a51d3;
+  width: 80%;
+  box-shadow: 0 7px 4px -1px rgb(58 81 211 / 75%);
+  -webkit-box-shadow: 0 5px 4px -1px rgb(58 81 211 / 75%);
+  -moz-box-shadow: 0 7px 4px -1px rgba(58, 81, 211, .75);
+}

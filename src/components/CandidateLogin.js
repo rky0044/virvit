@@ -3,54 +3,61 @@ import { Row, Card } from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer"
 import { useState } from "react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate } from "react-router-dom";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CandidateLogin = () => {
+    let navigate = useNavigate();
+    const [username, setUserName] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorUser, setErrorUser] = useState("");
+    const [errorPassword, setErrorPassword] = useState("");
+   
 
-    const[username,setUserName]=useState("");
-    const [password,setPassword]= useState("");
-    const [errorUser,setErrorUser] = useState("");
-    const [errorPassword,setErrorPassword] = useState("");
-    const navaigate = useNavigate;
+    const handalSubmit = async (e) => {
+        e.preventDefault();
+        console.log(username, password);
 
-    const collectData = async()=>{
-        console.log(username,password);
+        if (username == '') {
+            setErrorUser("user name is required");
+        }
+        if (password == '') {
+            setErrorPassword('Password is required');
+        }
 
-       if(username == ''){
-        setErrorUser("user name is required");
-       }
-       if(password == ''){
-        setErrorPassword(' Password is required')
-       }
+        let formData = new FormData();
+        formData.append('username', username);
+        formData.append('password', password);
+        formData.append('device_id', 1);
+
+        if (username != '' && password != '') {
+            
+            axios.post("https://virvit.mydevpartner.website/vvapi/v1/login/", formData)
+                .then((res) => {
+                    window.localStorage.setItem("loginUser", JSON.stringify(res.data));
+                    
+                    setTimeout(() => {
+                        console.log("shdbchjasbjb", res.data)
+                        navigate('/candidate');
+                    },1000);
+                    console.log("form Data", formData);
 
 
-       if(username != '' && password != '')
-       {
+                });
 
-           let result =await fetch("https://virvit.mydevpartner.website/vvapi/v1/login/",{
-               method:"post",
-              
-               body:JSON.stringify({username,password, device_id:'1'}),
-               headers:{
-                   'Content-Type':'Application/json'
-               },
-              
-           })
-           result=  await result.json();
-           console.log(result,"results");
-           if(result)
-           {
-               navaigate('/')
-           }
-       }
+
+        }
 
     }
 
     return (
         <>
-            <div className="container">
+            <div className="containerm">
                 <div className="header">
                     <Header />
+                    <ToastContainer />
                     <div className="row">
                         <div className="col-6 col-md-6">
                             <div className="loginForm">
@@ -58,12 +65,12 @@ const CandidateLogin = () => {
                                     <h6 className="loginHeading">Login to start your search !</h6>
                                 </div>
                                 <div>
-                                    <form>
+                                    <form onSubmit={handalSubmit}>
                                         <div>
 
-                                            <input className="inputText w-75 mt-2" value={username || ''} onChange={(event)=>setUserName(event.target.value)} type="text" id="fname" placeholder="Email Login Email ID" name="username" />
+                                            <input className="inputText w-75 mt-2" value={username || ''} onChange={(event) => setUserName(event.target.value)} type="text" id="fname" placeholder="Email Login Email ID" name="username" />
                                             <span><p className="requiredText">{errorUser}</p></span>
-                                            <input type="password" className="inputText w-75 " value={password || ''} onChange={(event)=>setPassword(event.target.value)} placeholder="Password" id="lname" name="password" />
+                                            <input type="password" className="inputText w-75 " value={password || ''} onChange={(event) => setPassword(event.target.value)} placeholder="Password" id="lname" name="password" />
                                             <span><p className="requiredText">{errorPassword}</p></span>
 
                                         </div>
@@ -71,11 +78,11 @@ const CandidateLogin = () => {
                                             <a href="#" >Forget Password ?</a>
                                         </div>
                                         <div className="form-check checkBox">
-                                                <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                                                <label className="form-check-label" for="exampleCheck1">Remember me</label>
+                                            <input type="checkbox" className="form-check-input" id="exampleCheck1" />
+                                            <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                                         </div>
                                         <div className="lognBtn">
-                                        <button type="button" onClick={collectData} className="btn btn-primary w-75 ">Login</button>
+                                            <button type="submit" className="btn btn-primary w-75 ">Login</button>
                                         </div>
 
                                     </form>
@@ -86,7 +93,7 @@ const CandidateLogin = () => {
                             <img className="headerIMG" src="./images/hiring-process2.png" />
                         </div>
                     </div>
-                   <Footer />
+                    <Footer />
                 </div>
 
             </div>

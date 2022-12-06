@@ -21,7 +21,7 @@ const CarouselSlider = () => {
     fetchJobs();
  }, [])
 
-    return ( 
+    return (
         <div className="container carouselDiv">
             <div className="row">
                 <div className="col-md-12">

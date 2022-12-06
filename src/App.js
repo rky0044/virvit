@@ -4,6 +4,8 @@ import CandidateRegistration from './components/CandidateRegistartion'
 import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import Registration from './components/CandidateRegistartion'
+import Candidate from './components/Candidate';
+
 
 
 function App() {
@@ -13,11 +15,8 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<CandidateLogin />} />
         <Route path='/registration' element={<Registration />} />
-
-
+        <Route path='/candidate' element={<Candidate />} />
       </Routes>
-
-
     </div>
   );
 }
