@@ -1,5 +1,6 @@
 import React from "react";
-import Header2 from "./Header2"
+import Header2 from "./Header2";
+
 import Footer from "./Footer";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,6 +22,7 @@ const location = <FontAwesomeIcon icon={faLocationPin} />
 
 
 
+
 const Candidate = () => {
 
     const [data, setData] = useState(null);
@@ -35,8 +37,9 @@ const Candidate = () => {
         setData(data2);
     }, []);
     const data2 = JSON.parse(window.localStorage.getItem('loginUser'));
-    
-    const id=data2.id
+
+    const id = data2.id
+    console.log(id)
 
 
 
@@ -58,6 +61,13 @@ const Candidate = () => {
                     console.log(res.data)
                 })
         }
+
+
+    }
+
+
+    const onSaved = (e)=>{
+        alert("this is save jobs");
 
 
     }
@@ -131,7 +141,7 @@ const Candidate = () => {
                                 <div className="job-status-section">
                                     <div className="saved-job">
                                         {fabookmark}
-                                        <span className="important-link">Saved Jobs</span>
+                                        <span onClick={onSaved} className="important-link">Saved Jobs</span>
                                     </div>
                                     <div className="job-application">
                                         {fashildnew}
@@ -157,47 +167,47 @@ const Candidate = () => {
 
             </div>
             {/* thi is seasrch result */}
-            {(isSearch == true) ? 
-            <div className="row">
-                {searchJob.map((item, key) => (
+            {(isSearch == true) ?
+                <div className="row">
+                    {searchJob.map((item, key) => (
 
-                    <div className="col-md-6">
-                        <div className="search-job-div md-4">
-                            <div className="row">
-                                <div className="col-md-5">
-                                    <h4 className="job-title">{item.organisation_detail.name}</h4>
-                                    <h5 className="job-sub-title">{item.title}</h5>
+                        <div className="col-md-6">
+                            <div className="search-job-div md-4">
+                                <div className="row">
+                                    <div className="col-md-5">
+                                        <h4 className="job-title">{item.organisation_detail.name}</h4>
+                                        <h5 className="job-sub-title">{item.title}</h5>
 
-                                    <p className="job-experience">{item.experiance_from} - {item.experiance_to} years experience</p>
+                                        <p className="job-experience">{item.experiance_from} - {item.experiance_to} years experience</p>
 
-                                    <p className="job-experience">SGD - {item.min_salary} - {item.max_salary}</p>
-                                    <p className="job-skill">
-                                        <span>Team Player, </span>
-                                    </p>
+                                        <p className="job-experience">SGD - {item.min_salary} - {item.max_salary}</p>
+                                        <p className="job-skill">
+                                            <span>Team Player, </span>
+                                        </p>
+                                    </div>
+                                    <div className="col-md-1">
+
+                                    </div>
+                                    <div className="col-md-3">
+                                        <button type="button" className="btn apply-btn">APPLY </button>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <button type="button" className="btn apply-btn">SAVE </button>
+                                    </div>
+
+
                                 </div>
-                                <div className="col-md-1">
-
-                                </div>
-                                <div className="col-md-3">
-                                    <button type="button"  className="btn apply-btn">APPLY </button>
-                                </div>
-                                <div className="col-md-3">
-                                    <button type="button" className="btn apply-btn">SAVE </button>
-                                </div>
-
-
                             </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
 
 
-            </div>
+                </div>
 
-               
-            :<div className="no-job-found">
-                <img src="./images/candidate_home.png" className="candidate-homepage" />
-            </div>
+
+                : <div className="no-job-found">
+                    <img src="./images/candidate_home.png" className="candidate-homepage" />
+                </div>
             }
             <Footer />
 

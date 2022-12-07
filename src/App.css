@@ -438,3 +438,9 @@ button.btn.apply-btn {
   background: none;
 
 }
+
+
+.profileBorder{
+  border-right: 1 px solid blue !important;
+  padding: 10px !important;
+}

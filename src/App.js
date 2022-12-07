@@ -5,6 +5,8 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './components/Home';
 import Registration from './components/CandidateRegistartion'
 import Candidate from './components/Candidate';
+import ProfileEdit from './components/ProfileEdit'
+
 
 
 
@@ -16,6 +18,8 @@ function App() {
         <Route path='/login' element={<CandidateLogin />} />
         <Route path='/registration' element={<Registration />} />
         <Route path='/candidate' element={<Candidate />} />
+        <Route path='/profile-edit' element={<ProfileEdit />} />
+
       </Routes>
     </div>
   );
