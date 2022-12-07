@@ -7,17 +7,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
+import {useNavigate } from "react-router-dom";
+
 import axios from "axios";
 const search = <FontAwesomeIcon icon={faSearch} />;
 const location = <FontAwesomeIcon icon={faLocationPin} />
 
 
 const Home = () => {
+    let navigate = useNavigate();
 
     const [title, setTitle] = useState('');
     const [area, setArea] = useState('');
     const [searchJob, setSearchJob] = useState([]);
+    const [isSeach, setIsSearch]=useState(false);
 
+    const handleApply = ()=>{
+       navigate('/login')
+    }
 
     const onSearch = (e) => {
         e.preventDefault();
@@ -25,7 +32,7 @@ const Home = () => {
         let formData = new FormData();
         formData.append('title', title);
         formData.append('area', area);
-        if (title != '' && area != '') {
+        if (title != '' || area != '') {
 
             axios.post('https://virvit.mydevpartner.website/vvapi/v1/job-filter/', formData)
                 .then((res) => {
@@ -33,6 +40,7 @@ const Home = () => {
                     console.log(res.data,"..new.reeknkesnfkn") ;
 
                    setSearchJob(res.data);
+                   setIsSearch(true);
 
                 })
         }
@@ -77,16 +85,19 @@ const Home = () => {
                 </div>
 
             </div>
-
+           {(isSeach==true)?
             <div className="row">
                 {searchJob.map((item,key)=>(
                     <div className="col-md-6">
                     <div className="search-job-div md-4">
                         <div className="row">
                             <div className="col-md-5">
-                                <h4 className="job-title">{item.title}Infotech Pvt Ltd</h4>
-                                <h5 className="job-sub-title">Marketing New</h5>
-                                <p className="job-experience">SGD - 5000 - 10000</p>
+                                <h4 className="job-title">{item.organisation_detail.name}</h4>
+                                <h5 className="job-sub-title">{item.title}</h5>
+                               
+                                <p className="job-experience">{item.experiance_from} - {item.experiance_to} years experience</p>
+
+                                <p className="job-experience">SGD - {item.min_salary} - {item.max_salary}</p>
                                 <p className="job-skill">
                                     <span>Team Player, </span>
                                 </p>
@@ -95,7 +106,7 @@ const Home = () => {
 
                             </div>
                             <div className="col-md-3">
-                                <button type="button" className="btn apply-btn">APPLY </button>
+                                <button type="button" onClick={handleApply} className="btn apply-btn">APPLY </button>
                             </div>
                             <div className="col-md-3">
                                 <button type="button" className="btn apply-btn">SAVE </button>
@@ -135,9 +146,8 @@ const Home = () => {
                 </div> */}
 
             </div>
+           :<CarouselSlider />}
 
-
-            <CarouselSlider />
             <Footer />
 
         </>

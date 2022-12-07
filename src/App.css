@@ -387,6 +387,7 @@ img.candidate-homepage {
   padding: 20px;
   border-radius: 12px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .job-title {
