@@ -28,7 +28,7 @@ const Home = () => {
 
     const onSearch = (e) => {
         e.preventDefault();
-        console.log(title, area);
+       
         let formData = new FormData();
         formData.append('title', title);
         formData.append('area', area);

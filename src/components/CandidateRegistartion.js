@@ -247,6 +247,7 @@ const CandidateRegistration = () => {
                     <Row>
                         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
                             <Row>
+                                
                                 <Col sm={6} className="text-center">
                                     <Nav variant="pills" className="flex-column ">
 

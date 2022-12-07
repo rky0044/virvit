@@ -430,3 +430,11 @@ button.btn.apply-btn {
   -webkit-box-shadow: 0 5px 4px -1px rgb(58 81 211 / 75%);
   -moz-box-shadow: 0 7px 4px -1px rgba(58, 81, 211, .75);
 }
+
+
+.candidate-search{
+
+  background-color: #fff !important;
+  background: none;
+
+}
