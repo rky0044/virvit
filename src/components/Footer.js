@@ -16,22 +16,22 @@ const Footer=()=>{
                     <div className="collapse navbar-collapse socialIconFooter " id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item active">
-                                <a className="nav-link" href="#"><img src="./images/twitter.png" /></a>
+                                <a className="nav-link" href="#"><img src="/images/twitter.png" /></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><img src="./images/facebook.png" /></a>
+                                <a className="nav-link" href="#"><img src="/images/facebook.png" /></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><img src="./images/linkedin.png" /></a>
+                                <a className="nav-link" href="#"><img src="/images/linkedin.png" /></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><img src="./images/instagram.png" /></a>
+                                <a className="nav-link" href="#"><img src="/images/instagram.png" /></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><img src="./images/whatsapp.png" /></a>
+                                <a className="nav-link" href="#"><img src="/images/whatsapp.png" /></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#"><img src="./images/youtube.png" /></a>
+                                <a className="nav-link" href="#"><img src="/images/youtube.png" /></a>
                             </li>
                         </ul>
                     </div>

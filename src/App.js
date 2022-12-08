@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Registration from './components/CandidateRegistartion'
 import Candidate from './components/Candidate';
 import ProfileEdit from './components/ProfileEdit'
+import JobDetails from './components/JobDetails'
 
 
 
@@ -19,6 +20,8 @@ function App() {
         <Route path='/registration' element={<Registration />} />
         <Route path='/candidate' element={<Candidate />} />
         <Route path='/profile-edit' element={<ProfileEdit />} />
+        <Route path='/candidate/jobDetails/:id' element={<JobDetails />} />
+
 
       </Routes>
     </div>

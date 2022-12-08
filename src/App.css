@@ -444,3 +444,118 @@ button.btn.apply-btn {
   border-right: 1 px solid blue !important;
   padding: 10px !important;
 }
+h2.job-title{
+  font-size: 1.5vw;
+    font-weight: 600;
+    font-family: Nunito Sans,sans-serif;
+    color: #3a51d3;
+}
+h4.company-name{
+  font-size: 1.5vw;
+    font-weight: 600;
+    font-family: Nunito Sans,sans-serif;
+    color: gray;
+}
+.text-right{
+  text-align: right;
+}
+
+button.btn.applied-btn.not-job-applied {
+  
+  border: 1.5px solid #b1afaf;
+  color: #3a51d3;
+  font-size: 1vw;
+  font-family: Nunito Sans,sans-serif;
+  border-radius: 12px;
+  width: 20%;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 4px -1px hsl(0deg 3% 87% / 75%);
+
+}
+.headerIMG2{
+  margin-left: -245px;
+  margin-bottom: 10px;
+}
+
+
+
+.job-detail-second{
+  width: 97%;
+  margin: 20px;
+  font-weight: 500;
+  padding: 20px 30px;
+  background-color: #fff;
+    color: #3a51d3;
+    font-size: 1vw;
+    font-family: Nunito Sans,sans-serif;
+    border: 1.5px solid #b1afaf;
+    border-radius: 12px;
+    box-shadow: 0 11px 4px -1px hsl(0deg 3% 87% / 75%);
+    -webkit-box-shadow: 0 5px 4px -1px hsl(0deg 3% 87% / 75%);
+}
+.job-detail-other{
+  font-size: .9vw;
+    font-weight: 500;
+    font-family: Nunito Sans,sans-serif;
+    color: #706e6e;
+}
+.job-detail-description{
+  margin: 20px;
+  text-align: left;
+  width: 97%;
+    font-weight: 500;
+    padding: 20px 30px;
+    background-color: #fff;
+    color: #3a51d3;
+    font-size: 1vw;
+    font-family: Nunito Sans,sans-serif;
+    border: 1.5px solid #b1afaf;
+    border-radius: 12px;
+    box-shadow: 0 11px 4px -1px hsl(0deg 3% 87% / 75%);
+    -webkit-box-shadow: 0 5px 4px -1px hsl(0deg 3% 87% / 75%);
+}
+
+.job-description-content{
+  font-size: 1.2vw;
+  font-weight: 600;
+  font-family: Nunito Sans,sans-serif;
+  color: #3a51d3;
+}
+.jobdetailsother{
+ text-align: left;
+}
+.job-post-date{
+  font-size: 1vw;
+  font-weight: 600;
+  color: gray;
+  font-family: Nunito Sans,sans-serif;
+}
+
+.companyName{
+  text-align: left;
+}
+.job-detail-div{
+  margin-top: 2%;
+}
+
+.jobdetailsother2{
+  text-align: left;
+}
+.titleAppyBtn.row {
+  margin-left: 25px;
+  margin-right: 31px;
+}
+.BreadcrumbDiv.col-sm-12 {
+  padding-left: 28px;
+  margin-bottom: 10px;
+}
+a.navbar-brand.header-titlee {
+  color: #3a51d3;
+  font-size: 24px;
+  font-weight: 600;
+}
+.logoHeader {
+  height: 79px !important;
+  margin-left: -298px;
+  padding-bottom: 10px;
+}

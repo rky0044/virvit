@@ -16,12 +16,12 @@ const Header2 = () => {
     const [data, setData] = useState(null);
     useEffect(() => {
         const data2 = JSON.stringify(window.localStorage.getItem('loginUser'));
-        console.log(data2);
+       
         setData(data2);
     }, [])
 
     const data2 = JSON.parse(window.localStorage.getItem('loginUser'));
-    console.log(data2.fullname, "data2 is ready");
+    
 
     const logout =(e)=>{
         e.preventDefault();
@@ -44,7 +44,8 @@ const Header2 = () => {
          
             <div className="row loginHeader">
                 <div className="col-md-6 imgHeader">
-                    <img src="./images/C2_Candidate Login Page1.png" style={{ height: "84px" }} />
+                    <img src="/images/virvit_logo.png" className="logoHeader"   />
+                    <a routerlink="/candidate" class="navbar-brand header-titlee" href="/candidate">Building Your Dreams</a>
                 </div>
                
                 <div className="col-md-6 header2Dropmdown">

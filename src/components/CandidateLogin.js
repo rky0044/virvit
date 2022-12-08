@@ -18,7 +18,7 @@ const CandidateLogin = () => {
 
     const handalSubmit = async (e) => {
         e.preventDefault();
-        console.log(username, password);
+        
 
         if (username == '') {
             setErrorUser("user name is required");
@@ -39,10 +39,10 @@ const CandidateLogin = () => {
                     window.localStorage.setItem("loginUser", JSON.stringify(res.data));
                     
                     setTimeout(() => {
-                        console.log("shdbchjasbjb", res.data)
+                       
                         navigate('/candidate');
                     },1000);
-                    console.log("form Data", formData);
+                   
 
 
                 });

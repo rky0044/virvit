@@ -12,7 +12,7 @@ const ProfileEdit = () => {
     const [job_preference, setSelectedJobs] = useState();
     const changeGobs = (event) => {
 
-        console.log(event.target.value, "change jobs");
+       
         setSelectedJobs(event.target.value)
     }
     //get job data form api

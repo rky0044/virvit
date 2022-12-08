@@ -78,7 +78,7 @@ const CandidateRegistration = () => {
                 'https://virvit.mydevpartner.website/vvapi/v1/skill/'
             );
             const data = await response.json();
-            console.log(data.results);
+           
             setSkills(data.results);
         };
 
@@ -87,7 +87,7 @@ const CandidateRegistration = () => {
                 'https://virvit.mydevpartner.website/vvapi/v1/job-preference/'
             );
             const data = await response.json();
-            console.log(data, "job data");
+           
             setJobs(data.results);
 
         };
@@ -102,7 +102,7 @@ const CandidateRegistration = () => {
     const [job_preference, setSelectedJobs] = useState();
 
     const changeFname = (e) => {
-        console.log(e.target.value, "this is f name");
+        
         setFname(e.target.value);
 
 
@@ -118,14 +118,14 @@ const CandidateRegistration = () => {
     };
     const changeGobs = (event) => {
 
-        console.log(event.target.value, "change jobs");
+       
         setSelectedJobs(event.target.value)
     }
 
     const changeResume = (event) => {
 
         setResume(event.target.files[0]);
-        console.log(event.target.files[0], "File uploadddd");
+       
 
 
     }
@@ -133,17 +133,17 @@ const CandidateRegistration = () => {
         let selectedIds = event.map(item => {
             return item.id
         })
-        console.log(selectedIds, "skill idddd")
+       
         setSelectedSkills(selectedIds)
     }
 
 
     const handleGenderChange = (e) => {
-        console.log(e.target.value)
+       
         setGender(e.target.value)
     }
     const handleJobsChange = (event) => {
-        console.log(event.target.value);
+       
         setSelectedJobs(event.target.value)
     }
     //registration ...
@@ -157,11 +157,11 @@ const CandidateRegistration = () => {
        
         if (skillList == undefined) {
             setErrorSkills('more the 3 skills is required')
-            console.log('skill ki consditiion me aajana chuta')
+           
         }
         if (job_preference == undefined) {
             setErrorJobs('select the jobs')
-            console.log(job_preference,' jobs is noooooo')
+           
         }
         if (first_name == '') {
 
@@ -200,7 +200,7 @@ const CandidateRegistration = () => {
 
         if (first_name != '' && last_name != '' && email != '' && dob != '' && start_work != '' && skillList != '' &&
             job_preference != '' && password != '' && cpassword != '' && gender != '' && mobile != '' && resume != '') {
-            console.log("blank field are required")
+          
 
 
             let formData = new FormData();
@@ -223,11 +223,11 @@ const CandidateRegistration = () => {
 
             //form validation
 
-            console.log(first_name, last_name, email, dob, mobile, start_work, resume, skillList, job_preference, password, cpassword, gender, "submint form data");
+          
 
             axios.post('https://virvit.mydevpartner.website/vvapi/v1/new-user-signup/', formData).then((res) => {
 
-                console.log(res);
+               
             })
 
         }

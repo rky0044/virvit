@@ -13,9 +13,9 @@ const CarouselSlider = () => {
     const fetchJobs =async ()=>{
         const response = await fetch('https://virvit.mydevpartner.website/vvapi/v1/jobs/'
         );
+       
         const data = await response.json();
-        console.log(data.results);
-        console.log(typeof(data.results),"type offffff")
+       
         setJobs(data.results);
     };
     fetchJobs();

@@ -36,9 +36,6 @@ const Home = () => {
 
             axios.post('https://virvit.mydevpartner.website/vvapi/v1/job-filter/', formData)
                 .then((res) => {
-                    console.log(JSON.stringify(res.data),"..reeknkesnfkn") ;
-                    console.log(res.data,"..new.reeknkesnfkn") ;
-
                    setSearchJob(res.data);
                    setIsSearch(true);
 

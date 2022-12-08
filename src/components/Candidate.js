@@ -12,6 +12,7 @@ import axios from "axios";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
+import {Link} from 'react-router-dom';
 
 const fabookmark = <FontAwesomeIcon icon={faBookBookmark} />;
 const fashildnew = <FontAwesomeIcon icon={faShield} />;
@@ -19,6 +20,7 @@ const faBellIcon = <FontAwesomeIcon icon={faBell} />;
 
 const search = <FontAwesomeIcon icon={faSearch} />;
 const location = <FontAwesomeIcon icon={faLocationPin} />
+
 
 
 
@@ -39,7 +41,7 @@ const Candidate = () => {
     const data2 = JSON.parse(window.localStorage.getItem('loginUser'));
 
     const id = data2.id
-    console.log(id)
+    
 
 
 
@@ -53,12 +55,9 @@ const Candidate = () => {
 
             axios.post('https://virvit.mydevpartner.website/vvapi/v1/job-filter/', formData)
                 .then((res) => {
-                    console.log(JSON.stringify(res.data), "..reeknkesnfkn");
-                    console.log(res.data, "..new.reeknkesnfkn");
-
-                    setSearchJob(res.data);
+                   setSearchJob(res.data);
                     setIsSearch(true);
-                    console.log(res.data)
+          
                 })
         }
 
@@ -66,11 +65,6 @@ const Candidate = () => {
     }
 
 
-    const onSaved = (e)=>{
-        alert("this is save jobs");
-
-
-    }
 
     return (
         <>
@@ -141,7 +135,7 @@ const Candidate = () => {
                                 <div className="job-status-section">
                                     <div className="saved-job">
                                         {fabookmark}
-                                        <span onClick={onSaved} className="important-link">Saved Jobs</span>
+                                        <span  className="important-link">Saved Jobs</span>
                                     </div>
                                     <div className="job-application">
                                         {fashildnew}
@@ -175,7 +169,7 @@ const Candidate = () => {
                             <div className="search-job-div md-4">
                                 <div className="row">
                                     <div className="col-md-5">
-                                        <h4 className="job-title">{item.organisation_detail.name}</h4>
+                                       <Link to={`/candidate/jobDetails/${item.id}`} ><h4 className="job-title">{item.organisation_detail.name}</h4></Link> 
                                         <h5 className="job-sub-title">{item.title}</h5>
 
                                         <p className="job-experience">{item.experiance_from} - {item.experiance_to} years experience</p>

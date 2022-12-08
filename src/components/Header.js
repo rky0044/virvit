@@ -7,7 +7,7 @@ const Header = () => {
         <>
             <div className="row loginHeader">
                 <div className="col-md-6 imgHeader">
-                    <img src="./images/C2_Candidate Login Page1.png" style={{height:"84px"}} />
+                    <img src="./images/C2_Candidate Login Page1.png" className="headerIMG2" style={{height:"84px"}} />
                 </div>
                 <div className="col-md-6">
                     <div className="loginBtn" >
