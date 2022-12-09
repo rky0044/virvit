@@ -45,7 +45,7 @@ const Header2 = () => {
             <div className="row loginHeader">
                 <div className="col-md-6 imgHeader">
                     <img src="/images/virvit_logo.png" className="logoHeader"   />
-                    <a routerlink="/candidate" class="navbar-brand header-titlee" href="/candidate">Building Your Dreams</a>
+                    <a routerlink="/candidate" className="navbar-brand header-titlee" href="/candidate">Building Your Dreams</a>
                 </div>
                
                 <div className="col-md-6 header2Dropmdown">
@@ -58,7 +58,7 @@ const Header2 = () => {
 
                 </div>
             </div>
-            <ToastContainer />
+           
         </>
     )
 }

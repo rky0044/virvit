@@ -22,7 +22,6 @@ function App() {
         <Route path='/profile-edit' element={<ProfileEdit />} />
         <Route path='/candidate/jobDetails/:id' element={<JobDetails />} />
 
-
       </Routes>
     </div>
   );

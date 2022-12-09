@@ -269,7 +269,7 @@ const CandidateRegistration = () => {
                                 <Col sm={6}>
                                     <Row>
 
-                                        <Col md={10}>
+                                        <Col md={9}>
                                             <Tab.Content>
                                                 <Tab.Pane eventKey="first">
                                                     <form onSubmit={handleSubmit}>
@@ -391,10 +391,10 @@ const CandidateRegistration = () => {
                                                 </Tab.Pane>
                                             </Tab.Content>
                                         </Col>
-                                        <Col md={2}>
+                                        <Col md={3}>
                                             <Tab.Content>
                                                 <Tab.Pane eventKey="first">
-                                                    <img src="./images/Candidate_Registration_Page2.png" />
+                                                    <img src="./images/Candidate_Registration_Page2.png" width="500%" />
                                                 </Tab.Pane>
                                             </Tab.Content>
                                         </Col>

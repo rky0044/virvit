@@ -7,7 +7,7 @@ import Header2 from "./Header2";
 import Footer from "./Footer";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import { useParams } from "react-router-dom";
-
+import * as moment from 'moment'
 
 const JobDetails = () => {
     
@@ -26,6 +26,7 @@ const JobDetails = () => {
 
             console.log(response,'rakesh');
             const data = await response.json();
+            
        
             setJobData(data);
             
@@ -61,7 +62,7 @@ const JobDetails = () => {
                         <div className="text-right">
                             <button className="btn applied-btn not-job-applied" type="button">Apply</button>
 
-                            <p className="job-post-date">Posted Date: July 5, 2022</p>
+                            <p className="job-post-date">Posted Date: {moment(getdata.timestamp).format('MMMM DD YYYY ')}</p>
                         </div>
                     </Col>
                    

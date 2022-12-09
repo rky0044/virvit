@@ -37,7 +37,7 @@ const CarouselSlider = () => {
                                {
                                 getjobs.map((item,key)=>(
 
-                                    <div className="col-md-3">
+                                    <div className="col-md-3" key={key}>
                                     <Card  style={{ width: '14rem', height:'14rem' }}>
                                         <Card.Body>
                                             <Card.Title>{item.title}</Card.Title>
