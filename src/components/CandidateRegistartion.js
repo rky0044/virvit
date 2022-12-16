@@ -380,7 +380,7 @@ const CandidateRegistration = () => {
                                                         <Row>
                                                             <Col md={12}>
 
-                                                                <button type="submit" className="btn btn-primary col-md-8 ">Registration</button>
+                                                                <button type="submit" className="btn btn-primary col-md-8 registratinbtn ">Registration</button>
 
                                                             </Col>
                                                         </Row>

@@ -49,7 +49,7 @@ const Header2 = () => {
                 </div>
                
                 <div className="col-md-6 header2Dropmdown">
-                    <DropdownButton id="dropdown-basic-button" title={data2.fullname}>
+                    <DropdownButton id="dropdown-basic-button drpCandidate " title={data2.fullname}>
                         <Dropdown.Item href="#/action-1">Edit Profile</Dropdown.Item>
                         <Dropdown.Item href="#/action-2">Job Application</Dropdown.Item>
                         <Dropdown.Item onClick={logout} href="#/action-3">Logout</Dropdown.Item>

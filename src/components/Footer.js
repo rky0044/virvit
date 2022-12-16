@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 const Footer=()=>{
@@ -7,13 +8,13 @@ const Footer=()=>{
         <div className="row footerRow"  style={{ borderTop: "1px solid gray" }}>
             <div className="col-md-4 siteMap">
             <span className="bbb">2022 © </span>
-            <a href="#" className="bbb">VirVit.sg </a>
+          <Link to={"/"}> <span className="bbb">VirVit.sg</span></Link>  
            
             </div>
             <div className="col-md-4 loginfooter">
-                <p className="footertext">Contact Us</p>
-                <p className="footertext">Privacy</p>
-                <p className="footertext">Terms & Conditions</p>
+              <a href="#" > <p className="footertext">Contact Us</p></a>
+              <a href="#" > <p className="footertext">Privacy</p></a>
+              <a href="#" > <p className="footertext">Terms & Conditions</p></a>
 
                 {/* <div className="col-md-4"><a href="#">Contact Us</a></div>
                 <div className="col-md-4"><a href="#">Privacy</a></div>

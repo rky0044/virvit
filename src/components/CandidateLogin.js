@@ -58,7 +58,7 @@ const CandidateLogin = () => {
                 <div className="header">
                     <Header />
                     <ToastContainer />
-                    <div className="row">
+                    <div className="row rowLogin" >
                         <div className="col-6 col-md-6">
                             <div className="loginForm">
                                 <div  >

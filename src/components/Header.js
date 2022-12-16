@@ -9,8 +9,9 @@ const Header = () => {
         <>
             <div className="row loginHeader">
                 <div className="col-md-5 imgHeader">
-                    <img src="/images/virvit_logo.png" className="logoHeader" />
-                    <a routerlink="/candidate" className="navbar-brand header-titlee" href="/candidate">Building Your Dreams</a>
+
+                    <Link to={"/"}><img src="/images/virvit_logo.png" className="logoHeader" /></Link> 
+                    <a routerlink="/candidate" className="navbar-brand header-titlee" href="#">Building Your Dreams</a>
                 </div>
                 <div className="col-md-7">
 

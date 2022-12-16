@@ -75,6 +75,7 @@ button.btn.btn-secondary.btn-md.btnSignup:hover {
   background-color: #ffff;
   top: -10px;
   width: 100%;
+  align-items: center;
 
 }
 
@@ -200,6 +201,7 @@ i:hover {
 }
 
 .search-div {
+  margin-top: 77px;
   padding: 80px 20px;
   background: #394bb4;
   background: linear-gradient(90deg, #394bb4 12%, #6d79be 68%, #929bd2 86%);
@@ -622,4 +624,11 @@ button.btn.btn-primary.w-75 {
 .bbb{
   margin-left: 10px;
   
+}
+ .drpCandidate {
+  margin-top: 25px !important;
+}
+.row.rowLogin {
+  margin-top: 96px;
+  align-items: center;
 }
