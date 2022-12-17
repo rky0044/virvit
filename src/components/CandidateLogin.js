@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Card } from "react-bootstrap";
+import {Card } from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer"
 import { useState } from "react";
@@ -7,6 +7,11 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Nav from 'react-bootstrap/Nav';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
 
 const CandidateLogin = () => {
     let navigate = useNavigate();
@@ -57,7 +62,29 @@ const CandidateLogin = () => {
             <div className="containerm">
                 <div className="header">
                     <Header />
-                    <ToastContainer />
+                    
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+                    <Row className="csignupHeadingTab">
+                                
+                                <Col sm={6} className="text-center">
+                                    <Nav variant="pills" className="flex-column ">
+
+                                        <Nav.Item className="csignup">
+                                            <Nav.Link eventKey="first" >Candidate Signup</Nav.Link>
+                                        </Nav.Item>
+
+                                    </Nav>
+                                </Col>
+                                <Col sm={6}>
+                                    <Nav variant="pills" className="flex-column">
+                                        <Nav.Item className="csignup">
+                                            <Nav.Link eventKey="second">Employer Signup</Nav.Link>
+                                        </Nav.Item>
+                                    </Nav>
+                                </Col>
+                            </Row>
+                    </Tab.Container>
+                    
                     <div className="row rowLogin" >
                         <div className="col-6 col-md-6">
                             <div className="loginForm">
@@ -80,7 +107,7 @@ const CandidateLogin = () => {
                                                 <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                                             </div>
                                             <div className="col-md-6">
-                                                <a href="#" >Forget Password ?</a>
+                                                <a href="/forgot-password" >Forget Password ?</a>
                                             </div>
 
 

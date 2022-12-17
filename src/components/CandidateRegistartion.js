@@ -244,9 +244,9 @@ const CandidateRegistration = () => {
 
                 <Header />
                 <div className="tabesContaints">
-                    <Row>
+                    <Row >
                         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-                            <Row>
+                            <Row className="csignupHeadingTab">
                                 
                                 <Col sm={6} className="text-center">
                                     <Nav variant="pills" className="flex-column ">

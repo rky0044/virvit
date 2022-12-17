@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+
 const Footer=()=>{
 
     return(
@@ -12,9 +13,9 @@ const Footer=()=>{
            
             </div>
             <div className="col-md-4 loginfooter">
-              <a href="#" > <p className="footertext">Contact Us</p></a>
-              <a href="#" > <p className="footertext">Privacy</p></a>
-              <a href="#" > <p className="footertext">Terms & Conditions</p></a>
+              <a href="/contact-us" > <p className="footertext">Contact Us</p></a>
+              <a href="/privacy-policy" > <p className="footertext">Privacy</p></a>
+              <a href="/terms-and-conditions" > <p className="footertext">Terms & Conditions</p></a>
 
                 {/* <div className="col-md-4"><a href="#">Contact Us</a></div>
                 <div className="col-md-4"><a href="#">Privacy</a></div>

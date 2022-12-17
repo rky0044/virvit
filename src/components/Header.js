@@ -18,10 +18,10 @@ const Header = () => {
 
                     <Nav className="justify-content-end" activeKey="/home">
                         <Nav.Item>
-                            <Nav.Link  eventKey="link-2">Job Search</Nav.Link>
+                            <Nav.Link  eventKey="link-2"  href="/">Job Search</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link eventKey="link-2">About Us</Nav.Link>
+                            <Nav.Link  href="/about-us">About Us</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="/login">
